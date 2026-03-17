@@ -14,13 +14,13 @@ NYISO and ERCOT represent two fundamentally different market designs: NYISO has 
 
 The dashboard is deployed on Streamlit Community Cloud:
 
-**[Launch Dashboard](https://stwillette-battery-dashboard-main.streamlit.app)**
+**[Launch Dashboard](https://stwillette-solar-storage-comparison-dashboard.streamlit.app)**
 
 ### Option 2: Run Locally
 
 ```bash
-git clone https://github.com/stwillette/battery-dashboard-main.git
-cd battery-dashboard-main
+git clone https://github.com/stwillette/solar-storage-comparison-dashboard.git
+cd solar-storage-comparison-dashboard
 pip install -r requirements.txt
 streamlit run app.py
 ```
