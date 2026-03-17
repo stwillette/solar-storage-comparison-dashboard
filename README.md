@@ -14,7 +14,7 @@ NYISO and ERCOT represent two fundamentally different market designs: NYISO has 
 
 The dashboard is deployed on Streamlit Community Cloud:
 
-**[Launch Dashboard](https://stwillette-solar-storage-comparison-dashboard.streamlit.app)**
+**[Launch Solar Storage Comparison Dashboard](https://stwillette-solar-storage-comparison-dashboard.streamlit.app)**
 
 ### Option 2: Run Locally
 
