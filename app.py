@@ -121,7 +121,7 @@ if include_offtake:
                  "70% contracted / 30% merchant is a common structure for financed projects."
         ) / 100
         nyiso_offtake_price = st.slider(
-            "Tolling Rate ($/kW-yr)", 50, 400, 150, 5, key="nyiso_offtake_price",
+            "Tolling Rate ($/kW-yr)", 50, 400, 120, 5, key="nyiso_offtake_price",
             help="Fixed annual payment per kW of contracted capacity. "
                  "This replaces energy arbitrage + capacity revenue for the contracted share. "
                  "Offtake agreements also reduce project risk, enabling cheaper financing (lower WACC). "
@@ -144,7 +144,7 @@ if include_offtake:
             help="Percentage of the battery's capacity under the tolling agreement."
         ) / 100
         ercot_offtake_price = st.slider(
-            "Tolling Rate ($/kW-yr)", 50, 400, 120, 5, key="ercot_offtake_price",
+            "Tolling Rate ($/kW-yr)", 10, 400, 55, 5, key="ercot_offtake_price",
             help="Fixed annual payment per kW of contracted capacity. "
                  "ERCOT tolling rates tend to be lower than NYISO due to the lack of a "
                  "capacity market — recent range: ~$100–150/kW-yr for 4hr systems."
@@ -167,8 +167,8 @@ if include_offtake:
     }
 else:
     offtake_params = {
-        "NYISO": dict(pct=0.0, price=150.0, term=20, esc=0.015),
-        "ERCOT": dict(pct=0.0, price=120.0, term=20, esc=0.015),
+        "NYISO": dict(pct=0.0, price=120.0, term=20, esc=0.015),
+        "ERCOT": dict(pct=0.0, price=55.0, term=20, esc=0.015),
     }
  
 # ─── Financial Parameters ─────────────────────────────────────────────────────
@@ -1656,3 +1656,4 @@ has the lowest due to wind curtailment depressing prices.
   (green, above zero) based on the daily price optimization.
 - *Monthly Average Pattern* — Average hourly price shape across all days in the selected month.
 """)
+ 
